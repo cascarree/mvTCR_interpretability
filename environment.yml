@@ -1,0 +1,32 @@
+# Environment for the mvTCR interpretability analysis.
+# The pins are not optional -- see README.md, "Setup".
+#
+#   conda env create -f environment.yml
+#   conda activate mvTCR
+#   pip install mvtcr==0.1.3 --target ./mvTCR    # NOT a normal pip install
+#
+name: mvTCR
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8.8
+  - pip
+  - pip:
+      # mvtcr 0.1.3 specifically: main has been refactored to Python 3.10 /
+      # PyTorch 2.x and is incompatible with the published checkpoints and
+      # evaluation notebooks. Install with --target ./mvTCR so the package sits
+      # beside data/ and a site-packages copy cannot shadow it.
+      - mvtcr==0.1.3
+      - torch==1.8.0+cu111
+      - --find-links https://download.pytorch.org/whl/torch_stable.html
+      # python-igraph must be 0.9.11 for leidenalg 0.8.4
+      - python-igraph==0.9.11
+      - leidenalg==0.8.4
+      - scanpy
+      - anndata
+      - scikit-learn
+      - pandas
+      - numpy
+      - matplotlib
+      - scipy

@@ -1,0 +1,22 @@
+# Raw per-cell attributions: ~2.5 GB per split, ~25 GB for both baselines.
+# GitHub's per-file limit is 100 MB, and a committed blob stays in history
+# even after the file is deleted.
+*.npz
+
+# Data and checkpoints: not ours to redistribute
+*.h5ad
+*.pt
+*.pth
+data/
+saved_models/
+mvTCR/
+
+# Cluster output
+*.log
+*.err
+slurm-*.out
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
