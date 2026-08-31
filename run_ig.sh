@@ -20,9 +20,7 @@ case "${SLURM_ARRAY_TASK_ID}" in
     *) echo "unexpected array index ${SLURM_ARRAY_TASK_ID}"; exit 1 ;;
 esac
 
-echo "======================================================================"
 echo " mvTCR IG analysis  |  baseline = ${BASELINE}"
-echo "======================================================================"
 echo "started   : $(date)"
 echo "job       : ${SLURM_ARRAY_JOB_ID}  task ${SLURM_ARRAY_TASK_ID}"
 echo "node      : $(hostname)"
