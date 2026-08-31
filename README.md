@@ -94,15 +94,6 @@ import errors that look like data problems.
 **Use Zenodo record v4**, not v1 — v1 has donors missing and a folder layout the
 notebooks do not expect.
 
-**Patch `get_modality_contribution`.** The evaluation notebooks call it, but it
-is absent from the 0.1.3 wheel. Recover it from a later source revision (Eq. 10
-of the original Methods) into
-`tcr_embedding/models/mixture_modules/moe.py`. Mind the indentation — that file
-uses tabs and CRLF.
-
-**Naming trap:** in `mvTCR_reproducibility`, the notebook named "Figure 1"
-produces **Figure 3** of the published paper.
-
 ---
 
 ## Running
