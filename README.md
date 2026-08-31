@@ -5,7 +5,7 @@ joint latent space. Given a T cell embedded from paired transcriptome and
 receptor sequence, which genes and which CDR3 positions place it in its
 antigen's region of that space?
 
-Course project, M.Sc. Computer Science — Deep Learning in the Clinic.
+Course project, M.Sc. Computer Science; Deep Learning in the Clinic.
 
 ---
 
